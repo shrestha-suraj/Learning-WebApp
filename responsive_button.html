@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Responsive Button Practice</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <style type="text/css">
-            h1{
-                color:red;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <table border="2px" bgcolor="blue" cellpadding= "0px" style="width:100%;height:100%">
-                <tr align="center">
-                    <td><h1 style="width:50%;height:100%;" id="change123">This is the old text.</h1></td>
-                    <td><button onclick="changeText()">Click Me See Magic</button></td>
-                </tr>
-                <tr align="center">
-                    <td><h1 style="width:50%;height:100%;" id="change1234">This is the old text.</h1></td>
-                    <td><button onclick="changeTextAgain()">Click Me See Magic</button></td>
-                </tr>
-                <tr align="center">
-                    <td><h1 style="width:50%;height:100%;" id="change12345">This is the old text.</h1></td>
-                    <td><button id="button123">Click Me See Magic</button></td>
-                </tr>
-            </table>
-        </div>
-        <table bgcolor="red">
-            <tr><td>Enter Text 1: <input type="text" id="text111"></td></tr>
-            <tr><td>Enter Text 2: <input type="text" id="text222"></td></tr>
-            <tr><h3 id="display_add_text">Click Button to add the Texts</h3></tr>
-            <button id="add_texts">Click Me</button>
-        </table>
-        <script src="responsive_button.js"></script>
-        <script type="text/javascript">
-            function changeTextAgain(){
-                var tElementAgain=document.getElementById("change1234");
-                tElementAgain.innerHTML="This happes when you write js code inside html.";
-            }
-        </script>
 
-    </body>
+<head>
+    <title>Responsive Button Practice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table border="2px" bgcolor="blue" cellpadding="0px" style="width:100%;height:100%">
+            <tr align="center">
+                <td>
+                    <h1 style="width:50%;height:100%;" id="change123">This is the old text.</h1>
+                </td>
+                <td><button onclick="changeText()">Click Me See Magic</button></td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h1 style="width:50%;height:100%;" id="change1234">This is the old text.</h1>
+                </td>
+                <td><button onclick="changeTextAgain()">Click Me See Magic</button></td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <h1 style="width:50%;height:100%;" id="change12345">This is the old text.</h1>
+                </td>
+                <td><button id="button123">Click Me See Magic</button></td>
+            </tr>
+        </table>
+    </div>
+    <table bgcolor="red">
+        <tr>
+            <td>Enter Text 1: <input type="text" id="text111" value="String 1"></td>
+        </tr>
+        <tr>
+            <td>Enter Text 2: <input type="text" id="text222" value="String 2"></td>
+        </tr>
+        <tr>
+            <h3 id="display_add_text">Click Button to add the Texts</h3>
+        </tr>
+        <button onclick="addTexts()" id="add_texts">Click Me</button>
+    </table>
+    <script src="responsive_button.js"></script>
+    <script type="text/javascript">
+        function changeTextAgain() {
+            var tElementAgain = document.getElementById("change1234");
+            tElementAgain.innerHTML = "This happes when you write js code inside html.";
+        }
+        function addTexts() {
+            var text1 = documnet.getElementById("text111").value;
+            var text2 = document.getElementById("text222").value;
+            var textAdd = text1 + text2;
+            var dispalyHere = document.getElementById("display_add_text");
+            dispalyHere.innerHTML = textAdd;
+        }
+    </script>
+
+</body>
+
 </html>
