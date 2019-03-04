@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <button id="clickHere" width="100px" height="100px">Show</button>
-        <br/>
-        <img src="pics/pubg.jpg" id="photo" width="200px" height="300px"/>
-        <script>
-            $(document).ready(function(){
-                    $("#photo").hide();
-            })
-            $("#clickHere").click(function(){
-                var bVal=$(this).html();
-                if (bVal=="Show"){
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="clickHere" width="100px" height="100px">Show</button>
+    <br />
+    <img src="pics/pubg.jpg" id="photo" width="200px" height="300px" />
+    <script>
+        $(document).ready(function () {
+            $("#photo").hide();
+            $("#clickHere").click(function () {
+                var bVal = $(this).html();
+                if (bVal == "Show") {
                     $("#photo").show();
                     $(this).html("Hide");
                 }
-                else{
+                else {
                     $("#photo").hide();
                     $(this).html("Show");
                 }
 
             })
-        </script>
-    </body>
+        })
+    </script>
+</body>
+
 </html>
