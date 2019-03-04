@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p id ="par1">This text will change</p>
+        <hr/>
+        String 1: <input type="text" id="string1"/><br/>
+        String 2: <input type="text" id="string2"/><br/>
+        <button id="thisButton">Click Me To Add</button>
+
+        <script>
+            $("#thisButton").click(function(){
+                var s1=$("#string1").val();
+                var s2=$("#string2").val();
+                var s3=s1+" "+s2;
+                $("#par1").html(s3);
+            })
+        </script>
+    </body>
+</html>
